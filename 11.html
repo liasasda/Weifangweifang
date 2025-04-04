@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鸢都潍坊 - 山海之间 风筝之都</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', '微软雅黑', sans-serif;
+        }
+
+        body {
+            background: #f0f8ff;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #2196F3);
+            height: 100vh;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -10%;
+            width: 120%;
+            height: 100px;
+            background: white;
+            transform: rotate(-3deg);
+        }
+
+        .nav {
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            background: rgba(255,255,255,0.9);
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav a {
+            color: #2196F3;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            color: #4CAF50;
+        }
+
+        .section {
+            padding: 80px 15%;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-top: 25vh;
+            font-family: '华文行楷', cursive;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeIn 1.5s;
+        }
+
+        h2 {
+            color: #2196F3;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        .kite-animation {
+            position: absolute;
+            animation: kite 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes kite {
+            0% { transform: translateX(-100%) rotate(15deg); }
+            100% { transform: translateX(150%) rotate(-15deg); }
+        }
+
+        .history-timeline {
+            border-left: 3px solid #4CAF50;
+            padding-left: 30px;
+            margin: 40px 0;
+        }
+
+        .scenic-spots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .spot-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .spot-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 50px 10%;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#about">潍坊简介</a>
+        <a href="#history">历史沿革</a>
+        <a href="#scenic">风景名胜</a>
+    </nav>
+
+    <header class="header">
+        <div class="kite-animation">🪁</div>
+        <h1>山海潍坊 鸢舞九天</h1>
+    </header>
+
+    <section id="about" class="section">
+        <div class="card">
+            <h2>风筝之都 山水潍坊</h2>
+            <p>潍坊，古称潍州、潍县，位于山东半岛西部，是世界风筝之都、中国画都、中国民间文化艺术之乡。这里依山傍海，南有沂蒙余脉，北濒渤海莱州湾，境内白浪河、虞河、弥河穿城而过，形成了"三河环抱、山海相依"的独特地理格局。</p>
+        </div>
+    </section>
+
+    <section id="history" class="section">
+        <div class="card">
+            <h2>千年文脉 历史传承</h2>
+            <div class="history-timeline">
+                <h3>春秋战国</h3>
+                <p>齐国故地，管仲、晏婴等历史名人辈出</p>
+                <h3>明清时期</h3>
+                <p>"南苏州、北潍县"，郑板桥曾任潍县知县</p>
+                <h3>近现代</h3>
+                <p>中国最早自主开埠城市之一，风筝文化享誉世界</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="scenic" class="section">
+        <div class="card">
+            <h2>鸢都胜景 美不胜收</h2>
+            <div class="scenic-spots">
+                <div class="spot-card">
+                    <img src="1.jpg" alt="十笏园">
+                    <div class="content">
+                        <h3>十笏园</h3>
+                        <p>江北私家园林的经典代表</p>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <img src="R-C.jpg" alt="青州古城">
+                    <div class="content">
+                        <h3>青州古城</h3>
+                        <p>九州之首，千年古城风貌</p>
+                    </div>
+                </div>
+                <div class="spot-card">
+                    <img src="3..jpg" alt="沂山风景区">
+                    <div class="content">
+                        <h3>沂山国家森林公园</h3>
+                        <p>山东第一大山，天然氧吧</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 潍坊文化旅游局 • 感受鸢都魅力，体验齐鲁风情</p>
+    </footer>
+</body>
+</html>
